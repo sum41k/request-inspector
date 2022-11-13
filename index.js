@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
   })
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 
 const server = http.createServer(app);
 server.listen(port, (err) => {
