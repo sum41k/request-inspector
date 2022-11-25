@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::005577361927:role/tenant1-ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "tenant1-container-test",
+            "image": "<IMAGE1_NAME>",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "SaaS_PoC"
+}
