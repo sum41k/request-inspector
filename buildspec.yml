@@ -6,6 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_SERVICE)
+      - AWS_DEFAULT_REGION=us-east-1
       - ECR_SERVICE=533015772676.dkr.ecr.us-east-1.amazonaws.com
       - REPOSITORY_URI=533015772676.dkr.ecr.us-east-1.amazonaws.com/tenant1-test-ecr
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
