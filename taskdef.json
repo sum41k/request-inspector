@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "arn:aws:iam::005577361927:role/tenant1-ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::533015772676:role/tenant1-ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "tenant1-container-test",
